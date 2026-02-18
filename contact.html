@@ -718,7 +718,53 @@
 
 
 #comp-k4wn87qz{--fill-layer-image-opacity:1;--bg-overlay-color:rgb(var(--color_43));--bg-gradient:none;width:100%;--column-width:492px;--column-flex:492;}#comp-k4wp45ix{--min-height:49px;--text-direction:var(--wix-opt-in-direction);}#comp-k50zuijx{--min-height:48px;--text-direction:var(--wix-opt-in-direction);}#comp-k4wn87t2{--item-size:29px;--item-margin-block:0;--item-margin-inline:0px 9px;--item-display:inline-block;--direction:var(--wix-opt-in-direction, ltr);width:105px;height:29px;}#comp-kct3bxe2{--min-height:29px;--text-direction:var(--wix-opt-in-direction);}</style>
+<style>
+    /* 1. REMOVE TOP WHITE SPACE (DESKTOP & MOBILE) */
+    :root {
+      --wix-ads-height: 0px !important; /* Force Wix ad variable to zero */
+    }
 
+    #site-root {
+      top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    /* 2. FIX GRID LAYOUT & PLACEHOLDERS */
+    #masterPage.mesh-layout {
+      /* Force the grid rows to ignore empty spaces at top/bottom */
+      grid-template-rows: auto 0px 1fr auto !important;
+      gap: 0 !important;
+    }
+
+    #SITE_HEADER-placeholder, 
+    #SITE_FOOTER-placeholder,
+    [id$="-placeholder"] {
+      display: none !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* 3. FIX MOBILE BOTTOM WHITE SPACE */
+    body.device-mobile-optimized #SITE_CONTAINER {
+      height: auto !important;
+      min-height: 100vh !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    #SITE_FOOTER, #SITE_FOOTER_WRAPPER {
+      position: relative !important;
+      bottom: 0 !important;
+      margin-top: -1px !important; /* Pulls footer up slightly to close gaps */
+    }
+
+    /* 4. KEEP SUBMENUS WORKING */
+    #SITE_HEADER, #SITE_HEADER_WRAPPER {
+      z-index: 9999 !important;
+      overflow: visible !important;
+    }
+  </style>
 </head>
 <body class='' >
 <script type="text/javascript">
@@ -787,7 +833,7 @@
     <svg data-dom-store style="display:none"><defs id="dom-store-defs"></defs></svg>
     
 
-<div id="SITE_CONTAINER"><div id="main_MF" class="main_MF"><div id="SCROLL_TO_TOP" class="Vd6aQZ ignore-focus SCROLL_TO_TOP" role="region" tabindex="-1" aria-label="top of page"><span class="mHZSwn">top of page</span></div><div id="BACKGROUND_GROUP" class="backgroundGroup_inkmg BACKGROUND_GROUP"><div id="BACKGROUND_GROUP_TRANSITION_GROUP"><div id="pageBackground_inkmg" data-media-height-override-type="" data-media-position-override="false" class="pageBackground_inkmg BmZ5pC"><div id="bgLayers_pageBackground_inkmg" data-hook="bgLayers" data-motion-part="BG_LAYER pageBackground_inkmg" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_pageBackground_inkmg" data-motion-part="BG_MEDIA pageBackground_inkmg" class="VgO9Yg"></div><div data-testid="bgOverlay" class="m4khSP"></div></div></div></div></div><div id="masterPage" class="mesh-layout masterPage css-editing-scope"><header id="SITE_HEADER" class="xU8fqS SITE_HEADER wixui-header" tabindex="-1"><div class="_C0cVf"><div class="_4XcTfy" data-testid="screenWidthContainerBg"></div></div><div class="U4Bvut"><div class="G5K6X8"><div class="gUbusX" data-testid="screenWidthContainerBgCenter"></div></div><div class="CJF7A2"><div data-mesh-id="SITE_HEADERinlineContent" data-testid="inline-content" class=""><div data-mesh-id="SITE_HEADERinlineContent-gridContainer" data-testid="mesh-container-content"><section id="comp-k4mfjoou" class="comp-k4mfjoou CohWsy wixui-column-strip"><div id="bgLayers_comp-k4mfjoou" data-hook="bgLayers" data-motion-part="BG_LAYER comp-k4mfjoou" class="if7Vw2"><div data-testid="colorUnderlay" class="tcElKx i1tH8h"></div><div id="bgMedia_comp-k4mfjoou" data-motion-part="BG_MEDIA comp-k4mfjoou" class="wG8dni"></div></div><div data-testid="columns" class="V5AUxf"><div id="comp-k4mfjoqb" class="comp-k4mfjoqb YzqVVZ wixui-column-strip__column"><div id="bgLayers_comp-k4mfjoqb" data-hook="bgLayers" data-motion-part="BG_LAYER comp-k4mfjoqb" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_comp-k4mfjoqb" data-motion-part="BG_MEDIA comp-k4mfjoqb" class="VgO9Yg"></div></div><div data-mesh-id="comp-k4mfjoqbinlineContent" data-testid="inline-content" class=""><div data-mesh-id="comp-k4mfjoqbinlineContent-gridContainer" data-testid="mesh-container-content"><div id="comp-k4l5zl94" class="comp-k4l5zl94 wixui-vector-image"><a data-testid="linkElement" href="https://mhaif.com" target="_self" class="aeyn4z"><div data-testid="svgRoot-comp-k4l5zl94" class="VDJedC"><?xml version="1.0" encoding="UTF-8"?>
+<div id="SITE_CONTAINER"><div id="main_MF" class="main_MF"><div id="SCROLL_TO_TOP" class="Vd6aQZ ignore-focus SCROLL_TO_TOP" role="region" tabindex="-1" aria-label="top of page"><span class="mHZSwn">top of page</span></div><div id="BACKGROUND_GROUP" class="backgroundGroup_inkmg BACKGROUND_GROUP"><div id="BACKGROUND_GROUP_TRANSITION_GROUP"><div id="pageBackground_inkmg" data-media-height-override-type="" data-media-position-override="false" class="pageBackground_inkmg BmZ5pC"><div id="bgLayers_pageBackground_inkmg" data-hook="bgLayers" data-motion-part="BG_LAYER pageBackground_inkmg" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_pageBackground_inkmg" data-motion-part="BG_MEDIA pageBackground_inkmg" class="VgO9Yg"></div><div data-testid="bgOverlay" class="m4khSP"></div></div></div></div></div><div id="site-root" class="site-root"><div id="masterPage" class="mesh-layout masterPage css-editing-scope"><header id="SITE_HEADER" class="xU8fqS SITE_HEADER wixui-header" tabindex="-1"><div class="_C0cVf"><div class="_4XcTfy" data-testid="screenWidthContainerBg"></div></div><div class="U4Bvut"><div class="G5K6X8"><div class="gUbusX" data-testid="screenWidthContainerBgCenter"></div></div><div class="CJF7A2"><div data-mesh-id="SITE_HEADERinlineContent" data-testid="inline-content" class=""><div data-mesh-id="SITE_HEADERinlineContent-gridContainer" data-testid="mesh-container-content"><section id="comp-k4mfjoou" class="comp-k4mfjoou CohWsy wixui-column-strip"><div id="bgLayers_comp-k4mfjoou" data-hook="bgLayers" data-motion-part="BG_LAYER comp-k4mfjoou" class="if7Vw2"><div data-testid="colorUnderlay" class="tcElKx i1tH8h"></div><div id="bgMedia_comp-k4mfjoou" data-motion-part="BG_MEDIA comp-k4mfjoou" class="wG8dni"></div></div><div data-testid="columns" class="V5AUxf"><div id="comp-k4mfjoqb" class="comp-k4mfjoqb YzqVVZ wixui-column-strip__column"><div id="bgLayers_comp-k4mfjoqb" data-hook="bgLayers" data-motion-part="BG_LAYER comp-k4mfjoqb" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_comp-k4mfjoqb" data-motion-part="BG_MEDIA comp-k4mfjoqb" class="VgO9Yg"></div></div><div data-mesh-id="comp-k4mfjoqbinlineContent" data-testid="inline-content" class=""><div data-mesh-id="comp-k4mfjoqbinlineContent-gridContainer" data-testid="mesh-container-content"><div id="comp-k4l5zl94" class="comp-k4l5zl94 wixui-vector-image"><a data-testid="linkElement" href="https://mhaif.com" target="_self" class="aeyn4z"><div data-testid="svgRoot-comp-k4l5zl94" class="VDJedC"><?xml version="1.0" encoding="UTF-8"?>
 <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 179.976 46.498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.977 46.498" height="175.74" width="680.227" data-type="ugc" role=presentation aria-hidden=true aria-label="">
     <g>
         <path aria-label="MHAIF" transform="matrix(1.3522 0 0 1.1421 -34.761 -413.395)" style="-inkscape-font-specification:&quot;Open Sans, Ultra-Bold&quot;;text-align:center" d="m73.286 382.603-3.324-11.707h-.1q.233 2.99.233 4.647v7.06h-3.891V366.35h5.848l3.39 11.54h.09l3.324-11.54h5.86v16.254h-4.037v-7.126q0-.556.011-1.235.023-.678.156-3.324h-.1l-3.28 11.685zm28.862 0h-4.414v-6.626h-5.103v6.626h-4.414V366.35h4.414v6.026h5.103v-6.026h4.414zm13.486 0-.8-3.046h-5.281l-.823 3.046h-4.825l5.303-16.321h5.86l5.37 16.321zm-1.712-6.648-.7-2.669q-.245-.89-.6-2.301-.345-1.412-.456-2.024-.1.567-.4 1.868-.29 1.301-1.301 5.126zm8.272 6.648V366.35h4.414v16.254zm12.252 0h-4.325V366.35h9.606v3.524h-5.28v3.102h4.869v3.524h-4.87z" font-weight="800" font-size="22.77" font-family="Open Sans" text-anchor="middle" fill="#adb5bd" fill-opacity=".992" paint-order="fill markers stroke"/>
